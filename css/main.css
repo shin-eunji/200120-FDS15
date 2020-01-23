@@ -1,11 +1,14 @@
 @charset "utf-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
+
 /* 기본 박스 사이징 재 설정 (width에  border-width와 padding을 포함하여 계산) */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -29,7 +32,6 @@
 a {
     text-decoration: none;
     color: inherit; /* body에 적용된 color값을 적용한다는 뜻으로 inherit를 사용한다.  */
-
 }
 html {
     font-size: 10px;
@@ -38,6 +40,8 @@ body {
     font-size: 1.4rem;
     color: #181818;
     background-color: #fff;
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    font-weight: 300;
 }
 .container {
     background-color: silver;
@@ -58,7 +62,8 @@ body {
     margin: 0;
     position: absolute;
     top: 45px;
-    left: 65px;
+    left: 62px;
+    z-index: 10;
 }
 /* 멤버 링크 */
 .member {
@@ -86,14 +91,140 @@ body {
     padding: 8px 10px;
 
 }
-.visual {
-    background-color: lime;
-    height: 10vh;
+/* main */
+.navigation {
+    padding-bottom: 50px;
 }
+.menu {
+    height: 47px;
+    list-style: none;
+    padding-left: 229px;
+    margin: 0;
+    background: linear-gradient(to bottom, #e8852e 0%,#ed552f 35%,#ed552f 70%,#e8852e 100%);
+    background-color: #ed552f;
+    border-top: 2px solid #000;
+    /* box-shadow: 0 -2px 0 0 #000; */
+}
+.menu-item {
+    outline: none;
+    position: relative;
+    float: left;
+    border-left: 2px solid rgba(255, 255, 255, .3);
+}
+.menu-button {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    display: block;
+    line-height: 45px;
+    padding: 0 20px;
+    text-shadow: 1px 0 0 #000,
+    -1px 0 0 #000,
+    0 -1px 0 #000,
+    0 1px 0 #000;
+}
+.menu-act .menu-button {
+    color: #ff0;
+}
+.menu-act .menu-button::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #000;
+    line-height: 45px;
+}
+.sub-menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    position: absolute;
+    display: none;
+    white-space: nowrap;
+    position: absolute;
+    top: 47px;
+}
+.menu-act .sub-menu {
+    display: block;
+}
+.menu li:nth-child(-n+3) .sub-menu {
+    left: 0;
+}
+.menu li:nth-child(n+4) .sub-menu {
+    right: 0;
+}
+.sub-menu li, .sub-menu a {
+    display: inline-block;
+}
+.sub-menu a {
+    padding: 8px 10px;
+}
+.sub-menu a:hover {
+    color: red;
+}
+.sub-menu a:hover::before {
+    content: '\e800';
+}
+.visual {
+    height: 120px;
+    position: relative;
+    /* background: url(./images/bg_flower.png) no-repeat; */
+    background-color: yellowgreen;
+}
+@keyframes textAni {
+    0% {
+        font-size: 16px;
+        color: rgba(0,0,0,0);
+        transform: translate(0,0);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0,0,0,1);
+        transform: translate(400px,75px);
+    }
+}
+.visual-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    animation-name: textAni;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+    animation-delay: 1000ms;
+    color: rgba(0,0,0,0);
+}
+@keyframes bgAni {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.visual::before, .visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    animation: bgAni 2s infinite alternate;
+}
+.visual::before {
+    background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+    background-position: 0 -10px, 670px 0;
+
+}
+.visual::after {
+    background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+    background-position: 300px 0px, 800px 0;
+    animation-delay: 1s;
+}
+
+/* 메인 콘텐츠 */
 .main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    min-height: 450px;
     background-color: #fff;
-    height: 60vh;
-    /* padding: 30px 15px; */
+    padding: 30px 15px;
+    border-radius: 15px 15px 0 0;
 }
 .group {
     float: left;
@@ -101,21 +232,98 @@ body {
     margin: 0 15px;
 }
 .group1 {
-    background-color: tomato;
     width: 250px;
 }
 .group2 {
-    background-color: skyblue;
     width: 380px;
 }
 .group3 {
-    background-color: pink;
     width: 190px;
 }
+/* 로그인  */
+.login {
+    background-color: #ed552f;
+    background-image: radial-gradient(circle at right top, #e8852e, #ed552f);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 0 0 #aaa;
+}
+.login-heading {
+    font-size: 1.5rem;
+    color: #ff0;
+    margin: 0;
+    text-indent: 10px;
+}
+.login-form {
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin-top: 10px;
+    padding: 10px 10px 0 10px;
+}
+.login-form fieldset {
+    position: relative;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 5px;
+}
+.user-email, .user-pw {
+    margin-bottom: 5px;
+}
+.login-form label {
+    display: inline-block;
+    width: 4em;
+}
+.login-form input {
+    width: 90px;
+    height: 22px;
+    border: 1px solid #aaa;
+    padding: 1px 1px 1px 5px;
+}
+.btn-login {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ed552f;
+    background: #ed552f;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.sign {
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2px 10px;
+    font-size: 1.3rem;
 
+}
+.sign .icon-right-open::before {
+    color: #ed552f;
+    margin: 0;
+}
+.sign a {
+    display: inline-block;
+    padding: 8px 0;
+    letter-spacing: -.03em;
+}
+
+/* 슬로건 */
 .slogan {
     background-color: orange;
 }
+
+/* 푸터 */
 .footer-bg {
     background-color: purple;
     width: 100vw;
