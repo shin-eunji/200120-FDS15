@@ -51,6 +51,7 @@ body {
     width: 940px;
     margin: 0 auto;
 }
+/* 헤더영역 */
 .header {
     background-color: #fff;
     border-radius: 0 0 15px 15px;
@@ -164,10 +165,10 @@ body {
 .sub-menu a:hover::before {
     content: '\e800';
 }
+/* 비주얼 메인 영역 */
 .visual {
     height: 120px;
     position: relative;
-    /* background: url(./images/bg_flower.png) no-repeat; */
     background-color: yellowgreen;
 }
 @keyframes textAni {
@@ -215,7 +216,6 @@ body {
     background-position: 300px 0px, 800px 0;
     animation-delay: 1s;
 }
-
 /* 메인 콘텐츠 */
 .main {
     display: flex;
