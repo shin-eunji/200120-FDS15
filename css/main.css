@@ -318,6 +318,24 @@ body {
     letter-spacing: -.03em;
 }
 
+/* 유효성 검사 배너 */
+.validation-list {
+    padding-left: 0;
+    margin: 25px 0;
+    list-style: none;
+}
+.validation-list li a {
+    display: block;
+    background: url(./images/validation_icon.png) no-repeat 20px 50%, #ccc linear-gradient(180deg, #bbb, #eee);
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    margin-top: 8px;
+    padding: 7px 10px 8px 45px;
+}
+.validation-list li a:hover {
+    color: red;
+}
+
 /* 슬로건 */
 .slogan {
     background-color: orange;
