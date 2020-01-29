@@ -438,13 +438,13 @@ body {
     position: relative;
     padding-top: 45px;
 }
-.notice-list, .notice-more, .pds-list, .pds-more {
+/* .notice-list, .notice-more, .pds-list, .pds-more {
     display: none;
 }
 .board-act .notice-list, .board-act .notice-more,
 .board-act .pds-list, .board-act .pds-more {
     display: block;
-}
+} */
 /* .board ul, .board a[class$="-more"] {}
 .board ul, .board ul+a {}
 이렇게도 쓰인다. */
@@ -470,10 +470,11 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
     vertical-align: middle;
+    /* flex-grow: 1; flex 시, 모든 영역+text-align: left 까지 적용됩니다. */
 }
 .notice-list time, .pds-list time {
     /* float: right; */
-    margin-left: auto;
+    /* margin-left: auto; flex 시 적용 가능. */
 }
 .tab {
     font-weight: 400;
