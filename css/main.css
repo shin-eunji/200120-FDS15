@@ -436,6 +436,7 @@ body {
 .board {
     width: 380px;
     position: relative;
+    padding-top: 45px;
 }
 .notice-list, .notice-more, .pds-list, .pds-more {
     display: none;
@@ -443,6 +444,10 @@ body {
 .board-act .notice-list, .board-act .notice-more,
 .board-act .pds-list, .board-act .pds-more {
     display: block;
+}
+.notice-list, .pds-list {
+    background-color: pink;
+
 }
 /* .board ul, .board a[class$="-more"] {}
 .board ul, .board ul+a {}
