@@ -445,13 +445,73 @@ body {
 .board-act .pds-list, .board-act .pds-more {
     display: block;
 }
-.notice-list, .pds-list {
-    background-color: pink;
-
-}
 /* .board ul, .board a[class$="-more"] {}
 .board ul, .board ul+a {}
 이렇게도 쓰인다. */
+.notice-list, .pds-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.notice-list li, .pds-list li {
+    margin-bottom: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* overflow: hidden; */
+}
+.notice-list li::before, .pds-list li::before {
+    /* float: left; */
+}
+.notice-list a, .pds-list a {
+    /* float: left;
+    width: 280px; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.notice-list time, .pds-list time {
+    /* float: right; */
+    margin-left: auto;
+}
+.tab {
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 0;
+}
+.tab a {
+    display: block;
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: #888;
+    background: #ccc linear-gradient(#bbb, #eee);
+}
+.board-act .tab a {
+    border: 1px solid #ed552f;
+    background: #fff;
+    color: #ed552f;
+    border-bottom-color: transparent
+}
+.notice-heading {
+    left: 0;
+}
+.pds-heading {
+    left: 74px;
+}
+.notice-more, .pds-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+.notice-more .icon-plus, .pds-more .icon-plus {
+    color: hsla(110, 50%, 40%, 1);
+}
+
 
 
 /* .board {
