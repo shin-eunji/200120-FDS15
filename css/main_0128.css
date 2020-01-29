@@ -242,82 +242,71 @@ body {
 }
 /* 로그인  */
 .login {
-    background-color: #ed552f;
-    background-image: radial-gradient(circle at right top, #e8852e, #ed552f);
-    border-radius: 5px;
-    padding: 10px;
+    background: orange;
+    background: #ed552f radial-gradient(circle at right top, #e8852e, #ed552f);
+    border-radius: 10px;
     box-shadow: 5px 5px 0 0 #aaa;
+    padding: 10px;
+
 }
 .login-heading {
     font-size: 1.5rem;
+    font-weight: 700;
     color: #ff0;
-    margin: 0;
     text-indent: 10px;
 }
+fieldset {
+    border: 0;
+}
 .login-form {
-    background-color: #fff;
+    background: #fff;
     border-radius: 5px 5px 0 0;
-    margin-top: 10px;
     padding: 10px 10px 0 10px;
-}
-.login-form fieldset {
-    position: relative;
-    border: 0 none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 5px;
-}
-.user-email, .user-pw {
-    margin-bottom: 5px;
+    margin-top: 10px;
 }
 .login-form label {
     display: inline-block;
     width: 4em;
 }
 .login-form input {
-    width: 90px;
-    height: 22px;
+    background: #fff;
     border: 1px solid #aaa;
+    width: 90px;
+    height: 24px;
     padding: 1px 1px 1px 5px;
+}
+.login-form .user-pw {
+    margin-top: 6px;
+}
+.login-form fieldset {
+    position: relative;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #aaa;
 }
 .btn-login {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     width: 50px;
-    height: 50px;
-    border: 1px solid #ed552f;
-    background: #ed552f;
-    border-radius: 3px;
+    height: 55px;
     color: #fff;
-    padding: 0;
+    background: #ed552f;
+    border-radius: 5px;
     font-size: 1.3rem;
-    font-weight: 400;
+    padding: 1px 5px;
 }
 .sign {
     background: #fff;
     border-radius: 0 0 5px 5px;
-    margin: 0;
-    padding-left: 0;
+    padding: 10px;
+}
+.sign li {
     list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: 2px 10px;
-    font-size: 1.3rem;
+}
+.sign li:nth-child(1){
+    letter-spacing: -1px;
 
 }
-.sign .icon-right-open::before {
-    color: #ed552f;
-    margin: 0;
-}
-.sign a {
-    display: inline-block;
-    padding: 8px 0;
-    letter-spacing: -.03em;
-}
-
 /* 유효성 검사 배너 */
 .validation-list {
     padding-left: 0;
@@ -432,88 +421,6 @@ body {
 .search-form label, .search-form input[type="search"], .search-form .btn-search {
     vertical-align: middle;
 }
-/* 공지사항 및 자료실 */
-.board {
-    width: 380px;
-    position: relative;
-}
-.notice-list, .notice-more, .pds-list, .pds-more {
-    display: none;
-}
-.board-act .notice-list, .board-act .notice-more,
-.board-act .pds-list, .board-act .pds-more {
-    display: block;
-}
-/* .board ul, .board a[class$="-more"] {}
-.board ul, .board ul+a {}
-이렇게도 쓰인다. */
-
-
-/* .board {
-    background: yellow;
-    width: 380px;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.board .notice, .board .pds {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.board h2 {
-    font-size: 1.4rem;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-}
-.board .tab {
-    display: inline;
-    border: 1px solid #ed552f;
-    border-bottom-color: transparent;
-    padding: 10px 12px;
-    border-radius: 5px 5px 0 0;
-}
-.pds .pds-heading {
-    position: relative;
-    left: 78px;
-    border: 1px solid #aaa;
-    background: #ccc linear-gradient(#bbb, #eee);
-    border-bottom-color: transparent;
-}
-.board ul {
-    position: relative;
-    margin-top: 45px;
-    padding: 0;
-}
-.board ul > li {
-    list-style: none;
-    line-height: 1.8;
-}
-.board ul > li a {
-    display: inline-block;
-    width: 240px;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    vertical-align: middle;
-}
-.board ul > li time {
-    float: right;
-    width: 100px;
-
-}
-.notice-more, .pds-more {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.icon-plus {
-    color: green;
-} */
-
-
 /* 슬로건 */
 .slogan {
     background-color: orange;
