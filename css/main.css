@@ -437,14 +437,16 @@ body {
     width: 380px;
     position: relative;
     padding-top: 45px;
+    margin-top: 30px;
+
 }
-/* .notice-list, .notice-more, .pds-list, .pds-more {
+.notice-list, .notice-more, .pds-list, .pds-more {
     display: none;
 }
 .board-act .notice-list, .board-act .notice-more,
 .board-act .pds-list, .board-act .pds-more {
     display: block;
-} */
+}
 /* .board ul, .board a[class$="-more"] {}
 .board ul, .board ul+a {}
 이렇게도 쓰인다. */
@@ -458,14 +460,14 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .notice-list li::before, .pds-list li::before {
-    /* float: left; */
+    float: left;
 }
 .notice-list a, .pds-list a {
-    /* float: left;
-    width: 280px; */
+    float: left;
+    width: 280px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -473,7 +475,7 @@ body {
     /* flex-grow: 1; flex 시, 모든 영역+text-align: left 까지 적용됩니다. */
 }
 .notice-list time, .pds-list time {
-    /* float: right; */
+    float: right;
     /* margin-left: auto; flex 시 적용 가능. */
 }
 .tab {
@@ -512,8 +514,6 @@ body {
 .notice-more .icon-plus, .pds-more .icon-plus {
     color: hsla(110, 50%, 40%, 1);
 }
-
-
 
 /* .board {
     background: yellow;
@@ -579,7 +579,132 @@ body {
     color: green;
 } */
 
+/* 새소식 */
+.news {
+    position: relative;
+    margin-top: 30px;
 
+}
+.news-heading {
+    font-size: 1.5rem;
+    color: #ed552f;
+    margin: 0 0 35px 0;
+}
+.news-link {
+    display: block;
+    margin-top: 22px;
+    color: inherit;
+    text-decoration: none;
+}
+.news::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: #ccc linear-gradient(90deg, #bbb, #fff);
+}
+.news-item {
+    position: relative;
+    top: 0px;
+    left: 0;
+    padding-left: 125px;
+    min-height: 100px;
+}
+.news-item .news-item-subject {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #333;
+    margin: 0 0 5px 0px;
+}
+.news-item .news-item-date {
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 3px 0;
+}
+.news-item .news-item-brief {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 10px 0 0 0;
+}
+.news-item-thumbnail {
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+.news-item-thumbnail img {
+    box-shadow: 0px 15px 15px 5px rgba(0,0,0,.2);
+}
+.news-item-thumbnail figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #333;
+}
+.news-more {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    padding: 10px 5px;
+    font-weight: 400;
+}
+.news-more .icon-plus {
+    color: hsla(110, 50%, 40%, 1);
+}
+
+/* 신규 이벤트 및 관련 사이트 */
+.grandient-box {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #ccc linear-gradient(180deg,#bbb,#eee);
+}
+.point-color {
+    color: #ed552f;
+}
+.event {
+    position: relative;
+    border-bottom: 1px solid #aaa;
+}
+.event .event-heading {
+    font-size: 1.5rem;
+}
+.event-thumbnail, .event-brief {
+    margin: 10px 0;
+}
+.event-thumbnail img {
+    box-shadow: 5px 5px 0 0 #999;
+    border: 1px solid #888;
+}
+.event-brief {
+    font-size: 1.38rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.btn-event {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn-event-prev, .btn-event-next {
+    border: 0;
+    padding: 0;
+    box-shadow: 0 0 0 0;
+    width: 19px;
+    height: 18px;
+    background: url(./images/back_forward.png) no-repeat;
+    overflow: hidden;
+}
+.btn-event-prev {
+    background-position: left;
+}
+.btn-event .btn-event-next {
+    background-position: right;
+}
 /* 슬로건 */
 .slogan {
     background-color: orange;
