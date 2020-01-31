@@ -515,6 +515,7 @@ body {
     color: hsla(110, 50%, 40%, 1);
 }
 
+
 /* .board {
     background: yellow;
     width: 380px;
@@ -670,8 +671,9 @@ body {
     position: relative;
     border-bottom: 1px solid #aaa;
 }
-.event .event-heading {
+.event-heading, .related-heading {
     font-size: 1.5rem;
+    margin: 0 0 10px 0;
 }
 .event-thumbnail, .event-brief {
     margin: 10px 0;
@@ -698,6 +700,7 @@ body {
     height: 18px;
     background: url(./images/back_forward.png) no-repeat;
     overflow: hidden;
+    cursor: pointer;
 }
 .btn-event-prev {
     background-position: left;
@@ -705,6 +708,41 @@ body {
 .btn-event .btn-event-next {
     background-position: right;
 }
+.related {
+    padding-top: 10px;
+}
+.related-list {
+    height: 27px;
+    border: 1px solid #aaa;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    /* transition */
+    transition-property: height, padding;
+    transition-duration: 400ms;
+    transition-delay: 200ms, 0ms;
+    transition-timing-function: ease-in-out;
+}
+.related-list:hover, .related-list:focus {
+    height: 147px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.related-list li {
+    height: 27px;
+    padding: 2px;
+}
+.related-list a {
+    display: block;
+    line-height: 20px;
+    font-size: 1.5rem;
+    text-indent: 1em;
+} 
+
+
 /* 슬로건 */
 .slogan {
     background-color: orange;
